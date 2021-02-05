@@ -15,6 +15,7 @@ const studentMaker = (studentArr) => {
   });
 
   printToDom("#students", cardString);
+  document.querySelector('form').reset();
 }
 
 export default studentMaker

@@ -59,12 +59,6 @@ const expelButton = (e) => {
   } 
 }
 
-// Triggers functions to execute when mouse events occur
-const buttonEvents = () => {
-  document.querySelector('#sort').addEventListener('click', createForm);
-  document.querySelector('#students').addEventListener('click', expelButton)
-}
-
 // Prints form to HTML when "Sort!" button is clicked
 const createForm = (e) => {
   let formId = e.target.id;
@@ -77,9 +71,32 @@ const createForm = (e) => {
                                                     <div class="form-text">Find your school!</div>
                                                     <button id="create" type="button" class="btn btn-primary btn-lg mt-2">Submit</button>
                                                   </div>
-                                                </form>`
+                                                </form>`                                             
   }
   document.querySelector('#create').addEventListener('click', createStudentObj);
+}
+
+// const createSelectMenu = () => {
+
+//   if (students.length > 1) {
+//     document.querySelector("#selectMenu").innerHTML = `<select class="form-select" aria-label="Default select example">
+//                                                   <option selected>Open this select menu</option>
+//                                                   <option value="1">One</option>
+//                                                   <option value="2">Two</option>
+//                                                   <option value="3">Three</option>
+//                                                   <option value="3">Three</option>
+//                                                 </select>`
+//   }
+//   console.log(e);
+// }
+
+// Triggers functions to execute when mouse events occur
+
+
+const buttonEvents = () => {
+  document.querySelector('#sort').addEventListener('click', createForm);
+  document.querySelector('#students').addEventListener('click', expelButton);
+  document.querySelector("#selectMenu").addEventListener('click',createSelectMenu);
 }
 
 //Initializes all functions
