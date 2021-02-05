@@ -1,5 +1,6 @@
 import { printToDom } from './printToDom.js'
 
+
 // Prints student card to HTML with student array passed as arguement
 const studentMaker = (studentArr) => {
   let cardString = '';
