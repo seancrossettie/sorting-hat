@@ -71,32 +71,27 @@ const createForm = (e) => {
                                                     <div class="form-text">Find your school!</div>
                                                     <button id="create" type="button" class="btn btn-primary btn-lg mt-2">Submit</button>
                                                   </div>
-                                                </form>`                                             
+                                                 </form>`
+    document.querySelector("#selectMenu").innerHTML = `<select class="form-select" aria-label="Default select example">
+                                                          <option selected>Choose a school</option>
+                                                          <option value="1">Gryffindor</option>
+                                                          <option value="2">Hufflepuff</option>
+                                                          <option value="3">Ravenclaw</option>
+                                                          <option value="3">Slytherin</option>
+                                                       </select>`
   }
   document.querySelector('#create').addEventListener('click', createStudentObj);
 }
 
-// const createSelectMenu = () => {
+// Filters School based on menu selection
+const filterSchool = (e) => {
 
-//   if (students.length > 1) {
-//     document.querySelector("#selectMenu").innerHTML = `<select class="form-select" aria-label="Default select example">
-//                                                   <option selected>Open this select menu</option>
-//                                                   <option value="1">One</option>
-//                                                   <option value="2">Two</option>
-//                                                   <option value="3">Three</option>
-//                                                   <option value="3">Three</option>
-//                                                 </select>`
-//   }
-//   console.log(e);
-// }
+}
 
 // Triggers functions to execute when mouse events occur
-
-
 const buttonEvents = () => {
   document.querySelector('#sort').addEventListener('click', createForm);
   document.querySelector('#students').addEventListener('click', expelButton);
-  document.querySelector("#selectMenu").addEventListener('click',createSelectMenu);
 }
 
 //Initializes all functions
